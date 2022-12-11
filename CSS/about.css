@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner{
+  background-color:#E9EDD8;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.container{
+	background-image: url("../Media/about-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+	height: 100vh;
+}
+.title{
+	font-family: 'DM Serif Display';
+	font-size: 300%;
+	color: black;
+	text-decoration: none;
+}
+nav{
+	padding-top: 0.75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nav ul{
+	list-style: none;
+	width: 65%;
+	text-align: right;
+	padding-right: 0.9%;
+}
+nav ul li{
+	display: inline-block;
+	margin: 10px 20px;
+}
+nav ul li a{
+	color: black;
+	text-decoration: none;
+	font-size: 150%;
+	font-family: 'Opens Sans', sans-serif;
+}
+.current{
+	color: #9b3636;
+}
+.btn{
+	border: 0;
+	outline: 0;
+}
+.content h1{
+	font-family: 'Opens Sans', sans-serif;
+	font-weight: 1000;
+	color: #292929;
+	font-size: 400%;
+	line-height: 110%;
+}
+.content h2{
+	font-family: 'Opens Sans', sans-serif;
+	font-weight: 500;
+	color: #292929;
+	font-size: 150%;
+	margin-top: 1%;
+  padding-top: .3rem;
+}
+.content{
+    padding: 4rem 4rem;
+    width: 70%;
+}
+.content a img{
+	margin-top: 1%;
+}
