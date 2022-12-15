@@ -6,11 +6,13 @@
 	<title>Spirit Farer</title>
 	<link rel="stylesheet" href="CSS/style.css">
 	<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
 	<div class="container">
-		<nav class="tester">
-			<a href="#", class="title">Spirit Farer</a>
+		<nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
+			<a href="home.html", class="title">Spirit Farer</a>
 			<ul>
 				<li><a href="home.html", class="current">Home</a></li>
 				<li><a href="about.html">About Us</a></li>
@@ -20,10 +22,44 @@
 			
 		</nav>
 		<div class="content">
-			<h1>Souls set sail,<br> set free.</h1>
-			<h2>Client tailored funeral services<br>and casket design</h2>
-			<a href="about.html"><img src="Media/Get Started.png", width="150"></a>
+			<h1 class="hidden">Souls set sail,<br> set free.</h1>
+			<h2 class="hidden1">Client tailored funeral services<br>and casket design</h2>
+			<a href="about.html"><img src="Media/Get Started.png", width="150" class="hidden"></a>
 		</div>
 	</div>
+	<footer>
+		<div class="footer-content">
+			<h3 class="hidden1">Spirit Farer</h3>
+			<p class="hidden1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<ul class="info hidden1">
+				<li><a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2020 spiritFarer. designed by <span>SaritaWinson</span></p>
+		</div>
+	</footer>
 </body>
+<script>
+const observer = new IntersectionObserver((entries)=>{
+		entries.forEach((entry)=>{
+			console.log(entry)
+			if(entry.isIntersecting){
+				entry.target.classList.add("show");
+			}else{
+				entry.target.classList.remove("show");
+			}
+		})
+	});
+	const hiddenElements3 = document.querySelectorAll('.hidden3');
+	hiddenElements3.forEach((e)=> observer.observe(e));
+	const hiddenElements2 = document.querySelectorAll('.hidden2');
+	hiddenElements2.forEach((e)=> observer.observe(e));
+	const hiddenElements1 = document.querySelectorAll('.hidden1');
+	hiddenElements1.forEach((e)=> observer.observe(e));
+	const hiddenElements = document.querySelectorAll('.hidden');
+	hiddenElements.forEach((e)=> observer.observe(e));
+</script>
 </html>

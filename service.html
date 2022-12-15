@@ -6,22 +6,85 @@
 	<title>Services</title>
 	<link rel="stylesheet" href="CSS/service.css">
 	<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+	<link rel="stylesheet" href="CSS/footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="container">
-        <nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
-			<a href="home.html", class="title">Spirit Farer</a>
-			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="service.html", class="current">Services</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-			</ul>
-		</nav>
-		<div class="content">
-			<h1>Souls set sail<br>
-			<h2>Over 100+ community designed caskets to choose from, as well as full client's choice on custom made caskets. Funeral services, tailored to client's preference, down to every detail.</h2>
-		</div>
+	<div class="scroll-container">
+		<section class="child">
+			<div class="container">
+				<nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
+					<a href="home.html", class="title ">Spirit Farer</a>
+					<ul>
+						<li><a href="home.html" >Home</a></li>
+						<li><a href="about.html" >About Us</a></li>
+						<li><a href="service.html", class="current ">Services</a></li>
+						<li><a href="contact.html" >Contact Us</a></li>
+					</ul>
+				</nav>
+				<div class="content">
+					<h1 class="hidden1">Souls set sail<br>
+					<h2 class="hidden">Over 100+ community designed caskets to choose from, as well as full client's choice on custom made caskets. Funeral services, tailored to client's preference, down to every detail.</h2>
+				</div>
+			</div>
+		</section>
+		<!-- THis is the skasdfjasldkjf -->
+		<section class="service__container">
+			<div class="service__right">
+				<img src="Media/casket1.jpg" alt="casket1" class="service__logo hidden">
+
+				<div class="service__description">
+					<h1 class="hidden">Solid Pine Casket</h1>
+					<p class="hidden">This Pine casket is crafted out of 100% Pine Wood. Beautifully handmade with the finest attention to detail, this casket is truly something special. A traditional, American-style casket with a fully-lined white velvet interior and custom pine cone decor. It has a natural, low polish finish. This casket serves as a wonderful final resting place for your loved one. Equipped with solid, wooden swing bar handles and bronze hardware. This is a standard, adult-sized casket made to fit into a standard burial vault perfectly. </p>
+				</div>
+			</div>
+			<div class="service__right">
+				<img src="Media/casket2.jpg" alt="casket1" class="hidden1 service__logo">
+
+				<div class="service__description">
+					<h1 class="h1 hidden1" >Last Supper Pieta</h1>
+					<p class="hidden1">"Last Supper Pieta" Casket is beautifully handcrafted, with High-Quality Solid Wood. This is a truly beautiful handmade funeral casket. The casket has a gloss dark cherry finish and a fully-lined, ivory-colored velvet interior with pleated detailing. A matching pillow and overlay are included. Fitted with solid swing handle-bars from each side. A detailed scene from The Last Supper is depicted on the outer wood panel representing the belief of the deceased. Standard size casket fits into a standard burial vault.</p>
+				</div>
+			</div>
+			<div class="service__right">
+				<img src="Media/casket3.jpg" alt="casket1" class=" hidden service__logo">
+
+				<div class="service__description">
+					<h1 class="h1 hidden" >In God's Care Casket</h1>
+					<p class="hidden">The casket In God's Care is made out of 18 gauge steel. It's handmade and features a Gloss Sprouse Blue exterior with golden hardware. The interior is fully lined with light-blue soft bedding, and perfectly matches the outside of the casket. Included is a matching pillow and overlay. This beautiful funeral casket is equipped with a full rubber gasket sealer, locking mechanism, and swing bar handle hardware. Crafted out of the highest quality materials. This is a standard, half-couch funeral casket that fits a standard-sized burial vault. </p>
+				</div>
+			</div>
+		</section>
 	</div>
+	<footer>
+		<div class="footer-content">
+			<h3 class="hidden">Spirit Farer</h3>
+			<p class="hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<ul class="info hidden">
+				<li><a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2020 spiritFarer. designed by <span>SaritaWinson</span></p>
+		</div>
+	</footer>
 </body>
+<script>
+	const observer = new IntersectionObserver((entries)=>{
+		entries.forEach((entry)=>{
+			console.log(entry)
+			if(entry.isIntersecting){
+				entry.target.classList.add("show");
+			}else{
+				entry.target.classList.remove("show");
+			}
+		})
+	});
+	const hiddenElements1 = document.querySelectorAll('.hidden1');
+	hiddenElements1.forEach((e)=> observer.observe(e));
+	const hiddenElements = document.querySelectorAll('.hidden');
+	hiddenElements.forEach((e)=> observer.observe(e));
+</script>
 </html>

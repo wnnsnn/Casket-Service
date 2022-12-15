@@ -3,27 +3,104 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Spirit Farer</title>
-	<link rel="stylesheet" href="CSS/style.css">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="CSS/contact.css">
 	<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
 	<div class="container">
-		<nav>
-			<a href="#", class="title">Spirit Farer</a>
+		<nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
+			<a href="home.html", class="title">Spirit Farer</a>
 			<ul>
-				<li><a href="home.html", class="current">Home</a></li>
+				<li><a href="home.html">Home</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="service.html">Services</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="contact.html", class="current hidden1">Contact Us</a></li>
 			</ul>
-			<a href="#"><img src="Media/Get Started.png", width="150"></a>
 		</nav>
 		<div class="content">
-			<h1>Souls set sail,<br> set free.</h1>
-			<h2>Client tailored funeral services<br>and casket design</h2>
-			<a href="#"><img src="Media/Get Started.png", width="150"></a>
+			<h1 class="hidden">Contact us</h1>
+			<div class="content2">
+				<div class="contactInfo">
+					<div class="box">
+						<div class="icon"><i class="fa fa-map-marker  hidden1" aria-hidden="true"></i>
+						</div>
+						<div class="text">
+							<h2 class="hidden1">Address</h2>
+							<p class="hidden1">Grenseveien 74,<br>0363 Oslo,<br>Norway</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon"><i class="fa fa-phone hidden1 " aria-hidden="true"></i></div>
+						<div class="text">
+							<h2 class="hidden1">Phonee</h2>
+							<p class="hidden1">+4722500030</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="icon"><i class="fa fa-envelope-o hidden1" aria-hidden="true"></i></div>
+						<div class="text">
+							<h2 class="hidden1">Email</h2>
+							<p class="hidden1">SpiritFarerOfficial@gmail.com</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="contactForm hidden1">
+					<form>
+						<h2>Send Messages</h2>
+						<div class="inputBox">
+							<input type="text" name="" required="required" placeholder="Full Name">
+						</div>
+						<div class="inputBox">
+							<input type="text" name="" required="required" placeholder="Email">
+						</div>
+						<div class="inputBox">
+							<textarea required="required" placeholder="Type your Message..."></textarea>
+						</div>
+						<div class="inputBox">
+							<input id="submit" type="submit" name="" value="Send">
+						</div>
+					</form>
+				</div>
+				<div class="hidden"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3999.7597078827134!2d10.79423764862732!3d59.91754129579618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416fad320f4def%3A0x807185dcb882b491!2sTS%20Jacobsen!5e0!3m2!1sen!2sph!4v1670955060330!5m2!1sen!2sph" width="400" height="400" style="border: 4px ridge #292929" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>			</div>
 		</div>
 	</div>
+	<footer>
+		<div class="footer-content hidden1">
+			<h3 class="hidden1">Spirit Farer</h3>
+			<p class="hidden1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<ul class="info">
+				<li><a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2020 spiritFarer. designed by <span>SaritaWinson</span></p>
+		</div>
+	</footer>
 </body>
+<script>
+	const observer = new IntersectionObserver((entries)=>{
+			entries.forEach((entry)=>{
+				console.log(entry)
+				if(entry.isIntersecting){
+					entry.target.classList.add("show");
+				}else{
+					entry.target.classList.remove("show");
+				}
+			})
+		});
+		const hiddenElements3 = document.querySelectorAll('.hidden3');
+		hiddenElements3.forEach((e)=> observer.observe(e));
+		const hiddenElements2 = document.querySelectorAll('.hidden2');
+		hiddenElements2.forEach((e)=> observer.observe(e));
+		const hiddenElements1 = document.querySelectorAll('.hidden1');
+		hiddenElements1.forEach((e)=> observer.observe(e));
+		const hiddenElements = document.querySelectorAll('.hidden');
+		hiddenElements.forEach((e)=> observer.observe(e));
+	</script>
 </html>

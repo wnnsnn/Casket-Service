@@ -6,22 +6,86 @@
 	<title>About us</title>
 	<link rel="stylesheet" href="CSS/about.css">
 	<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+	<link rel="stylesheet" href="CSS/footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="container">
-		<nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
-			<a href="#", class="title">Spirit Farer</a>
-			<ul>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="about.html", class="current">About Us</a></li>
-				<li><a href="service.html">Services</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-			</ul>
-		</nav>
-		<div class="content">
-			<h1>About Us</h1>
-            <h2>We here in Spirit Farer aim to provide the living the freedom to choose their own or their loved one's ceremony. Death is a concept beyond anyone's control, how to treat death, is not. We cannot choose when to die, but we can choose how to celebrate it, life and death. We help create ceremonies tailored to the character of the passing.</h2>
+	<div class="scroll-container">
+		<div class="container">
+			<nav class="cointain__navigation-precision-locator-indicator-tracking-interactatble-repositioner">
+				<a href="#", class="title">Spirit Farer</a>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html", class="current">About Us</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<h1 class="hidden1">About Us</h1>
+				<h2 class="hidden1">We here in Spirit Farer aim to provide the living the freedom to choose their own or their loved one's ceremony. Death is a concept beyond anyone's control, how to treat death, is not. We cannot choose when to die, but we can choose how to celebrate it, life and death. We help create ceremonies tailored to the character of the passing.</h2>
+			</div>
+		</div>
+		<div class="container2">
+			<section class="team">
+				<div class="container3">
+					<h1 class="hidden1">THE TEAM</h1>
+					<div class="row">
+						<div class="col">
+							<div class="teamimage hidden">
+								<img src="Media/team1.jpg" alt="person1" width="250" height="250">
+								<h2>Pancrazio Abhinav</h2>
+								<h3>Founder</h3>
+							</div>
+							<div class="teamimage hidden">
+								<img src="Media/team2.jpg" alt="person2" width="250" height="250">
+								<h2>Iqaluk Katayun</h2>
+								<h3>Chief Designer</h3>
+							</div>
+							<div class="teamimage hidden">
+								<img src="Media/team3.jpg" alt="person3" width="250" height="250">
+								<h2>Achilles Hypatos</h2>
+								<h3>Executive Coordinator</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</div>
+	<footer>
+		<div class="footer-content ">
+			<h3 class=" hidden1">Spirit Farer</h3>
+			<p class=" hidden1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<ul class="info hidden1">
+				<li><a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+				<li><a href="contact.html"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2020 spiritFarer. designed by <span>SaritaWinson</span></p>
+		</div>
+	</footer>
 </body>
+<script>
+	const observer = new IntersectionObserver((entries)=>{
+		entries.forEach((entry)=>{
+			console.log(entry)
+			if(entry.isIntersecting){
+				entry.target.classList.add("show");
+			}else{
+				entry.target.classList.remove("show");
+			}
+		})
+	});
+	const hiddenElements3 = document.querySelectorAll('.hidden3');
+	hiddenElements3.forEach((e)=> observer.observe(e));
+	const hiddenElements2 = document.querySelectorAll('.hidden2');
+	hiddenElements2.forEach((e)=> observer.observe(e));
+	const hiddenElements1 = document.querySelectorAll('.hidden1');
+	hiddenElements1.forEach((e)=> observer.observe(e));
+	const hiddenElements = document.querySelectorAll('.hidden');
+	hiddenElements.forEach((e)=> observer.observe(e));
+</script>
 </html>
